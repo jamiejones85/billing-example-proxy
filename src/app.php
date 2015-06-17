@@ -10,7 +10,7 @@ $app->dataServer = 'http://safe-plains-5453.herokuapp.com/bill.json';
  */
 $app->error(function (\Exception $e) use ($app) {
     $app->response->headers->set('Content-Type', 'application/json');
-
+    error_log($e);
     $app->response->setStatus(502);
     $app->response->setBody(json_encode($e->getMessage()));
 });
