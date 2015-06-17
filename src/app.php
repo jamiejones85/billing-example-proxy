@@ -11,7 +11,7 @@ $app->dataServer = 'http://safe-plains-5453.herokuapp.com/bill.json';
 $app->error(function (\Exception $e) use ($app) {
     $app->response->headers->set('Content-Type', 'application/json');
 
-    $app->response->setStatus(500);
+    $app->response->setStatus(502);
     $app->response->setBody(json_encode($e->getMessage()));
 });
 
@@ -31,7 +31,7 @@ $app->get('/', function () use ($app) {
     $response = $app->curl->get($app->dataServer);
 
     if ($response->headers['Status-Code'] != 200) {
-        $app->halt(502, 'Failed to retrieve bill data from external server.');
+        throw new Exception('Error contacting external server.');
     }
 
     $app->response->setBody($response->body);

@@ -22,12 +22,15 @@ function run_test()
 {
     pake_echo_comment('Running unit suite');
     pake_sh('./vendor/bin/phpunit', true);
+
+    pake_echo_comment('Running behat acceptance suite');
+    pake_sh('./vendor/bin/behat --config behat.yaml', true);
 }
 
 function run_sniff()
 {
     pake_echo_comment('Checking files for PSR2');
-    pake_sh("./vendor/bin/phpcs -p --standard=PSR2 ./src/app.php ./src/server.php");
+    pake_sh("./vendor/bin/phpcs -p --standard=PSR2  --extensions=php ./src/");
 }
 
 ?>
