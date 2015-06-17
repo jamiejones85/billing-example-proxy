@@ -1,4 +1,4 @@
-# Billing Example Proxy
+# Billing Example Proxy [![Build Status](https://travis-ci.org/jamiejones85/billing-example-proxy.svg?branch=master)](https://travis-ci.org/jamiejones85/billing-example-proxy)
 
 ## Description
 
