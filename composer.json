@@ -5,7 +5,8 @@
     "require": {
         "slim/slim": "^2.6",
         "shuber/curl": "dev-master",
-        "behat/behat": "~2.5"
+        "behat/behat": "~2.5",
+        "palanik/corsslim": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "1.*",

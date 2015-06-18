@@ -18,6 +18,11 @@ $app = new \Slim\Slim([
 require_once 'app.php';
 
 /**
+ * Add the Cors middleware
+ */
+$app->add(new \CorsSlim\CorsSlim());
+
+/**
  * Run the app
  */
 $app->run();
