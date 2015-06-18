@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The server to get the data from
+ * The server to get the data from - Move to config
  */
 $app->dataServer = 'http://safe-plains-5453.herokuapp.com/bill.json';
 
